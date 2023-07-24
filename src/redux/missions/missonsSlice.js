@@ -30,6 +30,7 @@ const missionsSlice = createSlice({
           mission_id: element.mission_id,
           mission_name: element.mission_name,
           description: element.description,
+          reversed: false,
         }));
         state.missions = missions;
       })
