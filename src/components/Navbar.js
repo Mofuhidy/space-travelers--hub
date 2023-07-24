@@ -11,8 +11,11 @@ function Navbar() {
 
   return (
     <header>
-      <div className="logo">
-        <img src={logo} alt="logo" />
+      <div className="rightNav">
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
+        <h1>Space Travelers&apos; Hub</h1>
       </div>
       <ul className="navigation">
         {links.map((link) => (
