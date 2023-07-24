@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import Rocket from '../components/Rocket';
+import './rockets.css';
 
 function Rockets() {
   const rockets = useSelector((state) => state.rockets);
@@ -11,7 +12,7 @@ function Rockets() {
     dispatch(fetchRockets());
   }, [dispatch]);
   return (
-    <ul>
+    <ul className="rocketsContainer">
       {rockets.map((rocket) => (
         <Rocket
           key={rocket.id}

@@ -5,15 +5,15 @@ function Rocket({
 }) {
   return (
     <>
-      <li id={id}>
-        <div>
-          <img src={image} alt="rocket" />
+      <li id={id} className="rocket">
+        <img src={image} alt="rocket" />
+        <div className="detailsContainer">
+          <h2>{title}</h2>
+          <p>
+            {description}
+          </p>
+          <button className="" type="button">Reverse Rocket</button>
         </div>
-        <h2>{title}</h2>
-        <p>
-          {description}
-        </p>
-        <button className="" type="button">Launch</button>
       </li>
     </>
   );

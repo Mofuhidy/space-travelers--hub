@@ -23,7 +23,7 @@ const rocketsSlice = createSlice({
       const result = rockets.map((rocket) => ({
         id: rocket.id,
         title: rocket.rocket_name,
-        image: rocket.flickr_images[0],
+        image: rocket.flickr_images[1],
         description: rocket.description,
       }));
       state.rockets = result;
