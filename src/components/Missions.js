@@ -24,7 +24,7 @@ function Missions() {
       </thead>
       <tbody>
         {missions.map((item) => (
-          <Mission key={item.mission_id} mission={item} />
+          <Mission key={item.missionId} mission={item} />
         ))}
       </tbody>
     </table>

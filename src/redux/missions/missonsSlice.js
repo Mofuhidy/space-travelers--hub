@@ -7,7 +7,7 @@ const initialState = {
 };
 const missionHandlerReducer = (state, { payload }) => ({
   ...state,
-  missions: state.missions.map((mission) => (mission.mission_id === payload
+  missions: state.missions.map((mission) => (mission.missionId === payload
     ? { ...mission, reserved: !mission.reserved }
     : mission)),
 });
@@ -27,10 +27,10 @@ const missionsSlice = createSlice({
         const data = action.payload;
 
         const missions = data.map((element) => ({
-          mission_id: element.mission_id,
-          mission_name: element.mission_name,
+          missionId: element.missionId,
+          missionName: element.missionName,
           description: element.description,
-          reversed: false,
+          reserved: false,
         }));
         state.missions = missions;
       })
