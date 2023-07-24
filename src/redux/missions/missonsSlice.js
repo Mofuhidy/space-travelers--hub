@@ -5,11 +5,17 @@ const initialState = {
   missions: [],
   isLoading: false,
 };
+const missionHandlerReducer = (state, { payload }) => ({
+  ...state,
+  missions: state.missions.map((mission) => (mission.mission_id === payload
+    ? { ...mission, reserved: !mission.reserved }
+    : mission)),
+});
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-
+    missionHandler: missionHandlerReducer,
   },
   extraReducers: (builder) => {
     builder
@@ -32,4 +38,5 @@ const missionsSlice = createSlice({
       });
   },
 });
+export const { missionHandler } = missionsSlice.actions;
 export default missionsSlice.reducer;
