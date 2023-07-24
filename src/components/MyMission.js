@@ -1,8 +1,7 @@
-
 import PropTypes from 'prop-types';
 
 const Mission = ({ mission }) => {
-  const { missionName, description, reserved } = mission; 
+  const { missionName, description, reserved } = mission;
   return (
     <tr className="mission-item">
       <td className="mission_name">{missionName}</td>
@@ -37,7 +36,7 @@ const Mission = ({ mission }) => {
 Mission.propTypes = {
   mission: PropTypes.shape({
     mission_id: PropTypes.string,
-    mission_name: PropTypes.string.isRequired,
+    missionName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     reserved: PropTypes.bool,
   }).isRequired,
