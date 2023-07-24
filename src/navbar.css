@@ -1,0 +1,32 @@
+.active {
+  color: #218bff;
+  text-decoration: underline;
+}
+
+a {
+  color: #218bff;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.navigation {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.logo > img {
+  width: 80px;
+  height: 80px;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-inline: 2.5rem;
+  height: 100px;
+  align-items: center;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
