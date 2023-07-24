@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { bookingRocket } from '../redux/rockets/rocketsSlice';
 
 function Rocket({
   id, title, image, description,
 }) {
+  const dispatch = useDispatch();
+  const handleBooking = (id) => {
+    dispatch(bookingRocket(id));
+  };
+
   return (
     <>
       <li id={id} className="rocket">
@@ -12,7 +19,7 @@ function Rocket({
           <p>
             {description}
           </p>
-          <button className="" type="button">Reverse Rocket</button>
+          <button onClick={() => handleBooking(id)} type="button">Reverse Rocket</button>
         </div>
       </li>
     </>
