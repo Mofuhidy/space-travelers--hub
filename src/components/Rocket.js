@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { bookingRocket } from '../redux/rockets/rocketsSlice';
 
 function Rocket({
-  id, title, image, description,
+  id, title, image, description, reserved,
 }) {
   const dispatch = useDispatch();
   const handleBooking = (id) => {

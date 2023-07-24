@@ -11,15 +11,13 @@ function Rockets() {
   useEffect(() => {
     dispatch(fetchRockets());
   }, [dispatch]);
+
   return (
     <ul className="rocketsContainer">
       {rockets.map((rocket) => (
         <Rocket
           key={rocket.id}
-          id={rocket.id}
-          title={rocket.title}
-          image={rocket.image}
-          description={rocket.description}
+          rocket={rocket}
         />
       ))}
     </ul>
