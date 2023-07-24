@@ -5,7 +5,7 @@ import Rocket from '../components/Rocket';
 import './rockets.css';
 
 function Rockets() {
-  const rockets = useSelector((state) => state.rockets);
+  const { rockets } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
