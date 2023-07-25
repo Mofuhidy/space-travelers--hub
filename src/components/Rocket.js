@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { bookingRocket } from '../redux/rockets/rocketsSlice';
+import { bookingRocket, cancelBookingRocket } from '../redux/rockets/rocketsSlice';
 
 function Rocket({
-  id, title, image, description,
+  id, title, image, description, reserved,
 }) {
   const dispatch = useDispatch();
   const handleBooking = (id) => {
     dispatch(bookingRocket(id));
+  };
+
+  const handleBookingCancel = (id) => {
+    dispatch(cancelBookingRocket(id));
   };
 
   return (
@@ -19,7 +23,15 @@ function Rocket({
           <p>
             {description}
           </p>
-          <button onClick={() => handleBooking(id)} type="button">Reverse Rocket</button>
+
+          {
+            !reserved ? (
+              <button onClick={() => handleBooking(id)} type="button" className="reserved">Reverse Rocket</button>
+            ) : (
+              <button onClick={() => handleBookingCancel(id)} type="button" className="reservedcancel">Cancel Reservation</button>
+            )
+          }
+
         </div>
       </li>
     </>

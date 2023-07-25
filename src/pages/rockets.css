@@ -34,7 +34,7 @@ li {
   line-height: 1.75rem;
 }
 
-.rocket button {
+.rocket .reserved {
   color: #fff;
   background-color: #218bff;
   border-radius: 0.25rem;
@@ -47,9 +47,28 @@ li {
   font-size: 1rem;
 }
 
-.rocket button:hover {
+.rocket .reservedcancel {
+  color: #6d6d6d;
+  border: #6d6d6d 1px solid;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.rocket .reserved:hover {
   color: #218bff;
   border: #218bff 1px solid;
   background-color: #fff;
+  cursor: pointer;
+}
+
+.rocket .reservedcancel:hover {
+  color: #fff;
+  background-color: rgb(123, 123, 123);
   cursor: pointer;
 }
