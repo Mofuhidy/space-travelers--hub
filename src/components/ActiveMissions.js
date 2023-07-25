@@ -1,26 +1,25 @@
 import { useSelector } from 'react-redux';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Table } from 'react-bootstrap';
 import './ActiveMissions.css';
 
 const ActiveMissions = () => {
-  const missions = useSelector((store) => store.missions.missions.filter((item) => item.reserved));
+  // Use useMemo to memoize the filtered missions
+  const missions = useSelector((store) => store.missions.missions);
+  const reservedMissions = useMemo(() => missions.filter((item) => item.reserved), [missions]);
 
   return (
     <div className=" mission-table mx-5 px-4">
       <h2>My Missions</h2>
-      {missions.length ? (
+      {reservedMissions.length ? (
         <Table bordered>
           <tbody>
-            {
-        missions.map((mission) => (
-          <tr key={mission.missionId}>
-            <td>{mission.missionName}</td>
-          </tr>
-        ))
-}
+            {reservedMissions.map((mission) => (
+              <tr key={mission.missionId}>
+                <td>{mission.missionName}</td>
+              </tr>
+            ))}
           </tbody>
-
         </Table>
       ) : <p>No Active missions</p>}
     </div>
