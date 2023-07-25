@@ -38,6 +38,7 @@ const rocketsSlice = createSlice({
         title: rocket.rocket_name,
         image: rocket.flickr_images[1],
         description: rocket.description,
+        reserved: false,
       }));
       state.rockets = result;
     }).addCase(fetchRockets.rejected, (state) => state);
