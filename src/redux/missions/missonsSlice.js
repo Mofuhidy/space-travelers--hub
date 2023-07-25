@@ -3,14 +3,20 @@ import { FetchMissions } from './missionsThunk';
 
 const initialState = {
   missions: [],
+  activeMissions: [], // New array to store active missions
   isLoading: false,
 };
+
 const missionHandlerReducer = (state, { payload }) => ({
   ...state,
-  missions: state.missions.map((mission) => (mission.mission_id === payload
+  missions: state.missions.map((mission) => (mission.missionId === payload
     ? { ...mission, reserved: !mission.reserved }
     : mission)),
+  activeMissions: state.activeMissions.includes(payload)
+    ? state.activeMissions.filter((missionId) => missionId !== payload)
+    : [...state.activeMissions, payload],
 });
+
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
@@ -27,10 +33,11 @@ const missionsSlice = createSlice({
         const data = action.payload;
 
         const missions = data.map((element) => ({
-          mission_id: element.mission_id,
-          mission_name: element.mission_name,
+          missionId: element.missionId,
+          missionName: element.missionName,
           description: element.description,
-          reversed: false,
+
+          reserved: state.activeMissions.includes(element.missionId),
         }));
         state.missions = missions;
       })
@@ -39,5 +46,6 @@ const missionsSlice = createSlice({
       });
   },
 });
+
 export const { missionHandler } = missionsSlice.actions;
 export default missionsSlice.reducer;

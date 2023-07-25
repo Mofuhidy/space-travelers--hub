@@ -1,6 +1,12 @@
+import ActiveMissions from '../components/ActiveMissions';
+
 function Myprofile() {
   return (
-    <div>Myprofile</div>
+    <>
+      <ActiveMissions />
+      <h2>Rockets</h2>
+    </>
+
   );
 }
 export default Myprofile;
