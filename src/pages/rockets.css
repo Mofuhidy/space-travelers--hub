@@ -20,11 +20,11 @@ li {
 .rocket {
   margin: 10px 0;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .rocket img {
-  width: 24%;
+  width: 22%;
   height: 200px;
   object-fit: cover;
 }
