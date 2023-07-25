@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Mission component correctly 1`] = `
+<DocumentFragment>
+  Test MissionThis is a test mission.
+  <span
+    class="mission-reserved"
+  >
+    Active Member
+  </span>
+  <button
+    class="leave-mission"
+    type="button"
+  >
+    Leave Mission
+  </button>
+</DocumentFragment>
+`;

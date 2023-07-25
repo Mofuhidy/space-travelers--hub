@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const baseUrl = 'https://api.spacexdata.com/v3/missions';
@@ -13,11 +12,15 @@ const toCamelCase = (data) => data.map(
 );
 
 export const FetchMissions = createAsyncThunk(
-  'Missions/FetchMissions',
+  'missions/fetchMissions',
   async (_, thunkAPI) => {
     try {
-      const resp = await axios(baseUrl);
-      const myData = toCamelCase(resp.data);
+      const response = await fetch(baseUrl);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      const myData = toCamelCase(data);
       return myData;
     } catch (error) {
       return thunkAPI.rejectWithValue('Error fetching missions');
