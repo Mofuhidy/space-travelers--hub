@@ -3,9 +3,7 @@ td {
   padding: 10px;
   font-size: 16px;
 }
-.mission-action {
-  width: 10%;
-}
+
 .mission-item:nth-of-type(odd) {
   background-color: #ededee;
 }
@@ -38,6 +36,7 @@ td {
 
 .mission-action {
   text-align: center;
+  width: 10%;
 }
 
 .leave-mission {
