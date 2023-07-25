@@ -1,0 +1,43 @@
+td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+}
+
+.mission-item:nth-of-type(odd) {
+  background-color: #ededee;
+}
+
+.join-status {
+  font-size: 10px;
+  line-break: unset;
+  text-align: center;
+  padding: 0 5px;
+  margin: auto;
+}
+
+.join-status span {
+  padding: 2px;
+  color: white;
+}
+
+.join-status span.mission-reserved {
+  background-color: #18a2b8;
+}
+
+.join-status span.mission-unreserved {
+  background-color: #6d757d;
+}
+
+.mission-action {
+  text-align: center;
+}
+
+.leave-mission {
+  border: 1px solid #e04e5c;
+  color: #e04e5c;
+}
+
+.join-mission {
+  border: 1px solid #8d9194;
+  color: #8d9194;
+}

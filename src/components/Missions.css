@@ -1,0 +1,15 @@
+
+table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.t-status,
+.t-action {
+  width: 8%;
+}
+
+th {
+  margin: 30%;
+}
