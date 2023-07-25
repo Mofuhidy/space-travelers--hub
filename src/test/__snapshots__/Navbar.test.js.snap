@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Navbar navigation links work correctly 1`] = `
+<a
+  aria-current="page"
+  class="active"
+  href="/"
+>
+  Rockets
+</a>
+`;
+
+exports[`Navbar Navbar navigation links work correctly 2`] = `
+<a
+  class=""
+  href="/myprofile"
+>
+  My Profile
+</a>
+`;
