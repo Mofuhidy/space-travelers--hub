@@ -9,7 +9,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Bookstore\] ](#-bookstore-)
+- [📖 \[Space Travlers' Hub\] ](#-space-travlers-hub-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -31,9 +31,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 [Bookstore] <a name="about-project"></a>
+# 📖 [Space Travlers' Hub] <a name="about-project"></a>
 
-**"Bookstore"** is a website that allow you to Display a list of books, Add a book, and Remove a selected book
+**"Space Travlers' Hub"** is a single-page web application that allows users to fetch rockets and missions data from the SpaceX API. Users can book and cancel reservations for rockets and missions. The application consists of three main pages: Rockets, Missions, and My Profile. On the My Profile page, users can view a list of their reserved rockets and missions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,9 +51,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Display books
-- Add books
-- Remove selected books
+- Fetching rockets and missions data from the SpaceX API.
+- Booking and canceling reservations for rockets and missions.
+- Separate pages for Rockets, Missions, and My Profile.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +71,7 @@
 
 - Open your Terminal
 - Navigate to the desired directory to which you want to clone the repository to
-- [Copy & Paste] git clone https://github.com/Mofuhidy/bookstore-react.git
+- [Copy & Paste] git clone https://github.com/Mofuhidy/space-travelers--hub.git
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-- git clone https://github.com/Mofuhidy/bookstore-react.git
+- git clone https://github.com/Mofuhidy/space-travelers--hub.git
 
 ### Install
 
@@ -155,14 +155,19 @@ npm test
 - GitHub: [@Mofuhidy](https://github.com/Mofuhidy)
 - LinkedIn: [@Mofuhidy](https://www.linkedin.com/in/mo-fuhidy/)
 
+👤 **John Thiong'o**
+
+- GitHub: [@tjay1760](https://github.com/tjay1760)
+- LinkedIn: [@John Thiongo](https://www.linkedin.com/in/john-thiongo-10484347/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add search form**
-- **Add pagination**
+- **Add User login**
+- **Save user data changes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,7 +177,7 @@ npm test
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Mofuhidy/bookstore-react/issues).
+Feel free to check the [issues page](https://github.com/Mofuhidy/space-travelers--hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

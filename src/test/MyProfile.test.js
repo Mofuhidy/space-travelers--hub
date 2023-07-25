@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import MyProfile from '../pages/Myprofile';
 import store from '../redux/store';
 
