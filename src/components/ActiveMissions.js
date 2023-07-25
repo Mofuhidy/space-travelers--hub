@@ -8,7 +8,7 @@ const ActiveMissions = () => {
 
   return (
     <div className=" mission-table mx-5 px-4">
-      <h2>My Missions</h2>
+      <h2 className="titleTable">My Missions</h2>
       {missions.length ? (
         <Table bordered>
           <tbody>

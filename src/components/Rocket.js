@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { bookingRocket, cancelBookingRocket } from '../redux/rockets/rocketsSlice';
+import { rocketHandler } from '../redux/rockets/rocketsSlice';
 
 function Rocket({
   id, title, image, description, reserved,
 }) {
   const dispatch = useDispatch();
   const handleBooking = (id) => {
-    dispatch(bookingRocket(id));
+    dispatch(rocketHandler(id));
   };
 
   const handleBookingCancel = (id) => {
-    dispatch(cancelBookingRocket(id));
+    dispatch(rocketHandler(id));
   };
 
   return (
