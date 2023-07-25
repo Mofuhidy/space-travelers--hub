@@ -1,0 +1,56 @@
+td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.mission-item:nth-of-type(odd) {
+  background-color: #ededee;
+}
+
+.join-status {
+  font-size: 10px;
+  line-break: unset;
+  text-align: center;
+  padding: 0 5px;
+  margin: auto;
+}
+
+.join-status span {
+  padding: 2px;
+  color: white;
+}
+
+.join-status span.mission-reserved {
+  background-color: #18a2b8;
+  border-radius: 0.25rem;
+  padding-inline: 5px 10px;
+}
+
+.join-status span.mission-unreserved {
+  background-color: #6d757d;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  padding-inline: 5px 10px;
+}
+
+.mission-action {
+  text-align: center;
+  width: 10%;
+}
+
+.leave-mission {
+  border: 1px solid #e04e5c;
+  color: #e04e5c;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 5px 9px;
+}
+
+.join-mission {
+  border: 1px solid #8d9194;
+  color: #8d9194;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 5px 15px;
+}

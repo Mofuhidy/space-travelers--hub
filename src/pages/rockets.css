@@ -1,0 +1,88 @@
+ul,
+li {
+  list-style: none;
+}
+
+.title {
+  margin: 0;
+}
+
+.rocketsContainer {
+  margin: 0;
+  padding-inline: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.rocket {
+  margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.rocket img {
+  width: 22%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.rocket .detailsContainer {
+  width: 80%;
+  margin-left: 2.5rem;
+}
+
+.rocket h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.rocket .reserved {
+  color: #fff;
+  background-color: #218bff;
+  border-radius: 0.25rem;
+  border: none;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.rocket .reservedcancel {
+  color: #6d6d6d;
+  border: #6d6d6d 1px solid;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.rocket .reserved:hover {
+  color: #218bff;
+  border: #218bff 1px solid;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.rocket .reservedcancel:hover {
+  color: #fff;
+  background-color: rgb(123, 123, 123);
+  cursor: pointer;
+}
+
+.reservedBadge {
+  background-color: #1aa1b9;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 3.5px;
+  margin-right: 7px;
+}
