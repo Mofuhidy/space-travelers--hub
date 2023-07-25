@@ -19,16 +19,24 @@ function Rocket({
       <li id={id} className="rocket">
         <img src={image} alt="rocket" />
         <div className="detailsContainer">
-          <h2>{title}</h2>
-          <p>
-            {description}
-          </p>
-
           {
             !reserved ? (
-              <button onClick={() => handleBooking(id)} type="button" className="reserved">Reverse Rocket</button>
+              <>
+                <h2 className="title">{title}</h2>
+                <p>
+                  {description}
+                </p>
+                <button onClick={() => handleBooking(id)} type="button" className="reserved">Reverse Rocket</button>
+              </>
             ) : (
-              <button onClick={() => handleBookingCancel(id)} type="button" className="reservedcancel">Cancel Reservation</button>
+              <>
+                <h2 className="title">{title}</h2>
+                <p>
+                  <span className="reservedBadge">Reserved</span>
+                  {description}
+                </p>
+                <button onClick={() => handleBookingCancel(id)} type="button" className="reservedcancel">Cancel Reservation</button>
+              </>
             )
           }
 
