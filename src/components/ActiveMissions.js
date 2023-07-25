@@ -4,7 +4,6 @@ import { Table } from 'react-bootstrap';
 import './ActiveMissions.css';
 
 const ActiveMissions = () => {
-  // Use useMemo to memoize the filtered missions
   const missions = useSelector((store) => store.missions.missions);
   const reservedMissions = useMemo(() => missions.filter((item) => item.reserved), [missions]);
 
