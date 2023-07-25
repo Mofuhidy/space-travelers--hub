@@ -44,6 +44,7 @@ const Mission = ({ mission }) => {
         </>
       )}
     </tr>
+
   );
 };
 
