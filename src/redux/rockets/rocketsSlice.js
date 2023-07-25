@@ -11,24 +11,23 @@ export const fetchRockets = createAsyncThunk(
   },
 );
 
-const initialState = { rockets: [] };
+const initialState = { rockets: [], activeRockets: [] };
+
+const rocketHandlerReducer = (state, { payload }) => ({
+  ...state,
+  rockets: state.rockets.map((rocket) => (rocket.id === payload
+    ? { ...rocket, reserved: !rocket.reserved }
+    : rocket)),
+  activeRockets: state.activeRockets.includes(payload)
+    ? state.activeRockets.filter((rocketId) => rocketId !== payload)
+    : [...state.activeRockets, payload],
+});
 
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    bookingRocket: (state, action) => {
-      state.rockets = state.rockets.map((rocket) => {
-        if (rocket.id !== action.payload) return rocket;
-        return { ...rocket, reserved: true };
-      });
-    },
-    cancelBookingRocket: (state, action) => {
-      state.rockets = state.rockets.map((rocket) => {
-        if (rocket.id !== action.payload) return rocket;
-        return { ...rocket, reserved: false };
-      });
-    },
+    rocketHandler: rocketHandlerReducer,
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
@@ -38,11 +37,12 @@ const rocketsSlice = createSlice({
         title: rocket.rocket_name,
         image: rocket.flickr_images[1],
         description: rocket.description,
+        reserved: state.activeRockets.includes(rocket.id),
       }));
       state.rockets = result;
     }).addCase(fetchRockets.rejected, (state) => state);
   },
 });
 
-export const { bookingRocket, cancelBookingRocket } = rocketsSlice.actions;
+export const { rocketHandler } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
