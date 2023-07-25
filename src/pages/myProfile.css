@@ -1,0 +1,10 @@
+.myProfileContainer {
+  display: flex;
+  justify-content: center;
+  padding-inline: 4rem;
+}
+
+.titleTable {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
